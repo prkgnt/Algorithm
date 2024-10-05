@@ -1,5 +1,4 @@
 def solution(id_list, report, k):
-    answer = []
     id_idx = {}
     report_idx = {}
     report = list(set(report))
