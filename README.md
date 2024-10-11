@@ -60,3 +60,5 @@
 | **https://school.programmers.co.kr/learn/courses/30/lessons/파일명** |                        |    |    |
 | [귤 고르기](programmers/138476-귤고르기.py)                               |                        |    |    |
 | [신고결과받기](programmers/92334-신고결과받기.py)                             |                        |    |    |
+| [k진수에서 소수 개수 구하기](programmers/92335-k진수에서소수개수구하기.py)              |                        |    |    |
+| [주차요금계산](programmers/92341-주차요금계산.py)                             |                        |    |    |
