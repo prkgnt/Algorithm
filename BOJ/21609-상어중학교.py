@@ -74,13 +74,13 @@ while True:
                     arr[k][j] = arr[k-1][j]
                 arr[0][j] = -2
 
-    # for i in range(n):
-    #     for j in range(n):
-    #         if arr[i][j] < 0 :
-    #             continue
-    #         if i+1 < n and arr[i+1][j] == -2:
-    #             arr[i+1][j] = arr[i][j]
-    #             arr[i][j] = -2
+    for i in range(n):
+        for j in range(n):
+            if arr[i][j] < 0 :
+                continue
+            if i+1 < n and arr[i+1][j] == -2:
+                arr[i+1][j] = arr[i][j]
+                arr[i][j] = -2
     for i in range(n):
         print(arr[i])
     print("---------------------")
