@@ -80,11 +80,18 @@ while True:
 
     # 블록 제거
     for v in biggest_group:
+        # print(arr[v[0]][v[1]], end=' ')
         arr[v[0]][v[1]] = -2
-
+    # print(" ")
+    # for i in range(n):
+    #     print(arr[i])
+    # print(" ")
     gravity()
     rotate()
     gravity()
+    # for i in range(n):
+    #     print(arr[i])
+    # print("--------------------------")
 
 print(score)
 
