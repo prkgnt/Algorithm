@@ -29,3 +29,30 @@ for i in range(1, K+1):
             dp[i][j] = dp[i][j - 1]
 
 print(max(max(dp)))
+
+
+# ------------------------------------------
+# 2트로 푼 문제
+
+n, k = map(int, input().split())
+arr = []
+for _ in range(n):
+    arr.append(list(map(int,input().split())))
+
+dp = [[0]*(k+1) for _ in range(n+1)]
+
+# 물건개수가 i이고 최대 배낭무게가 j일때 담을 수 있는 최대 가치 == dp[i][j]
+
+for i in range(1, n+1):
+    for j in range(1, k+1):
+        w = arr[i-1][0]
+        v = arr[i-1][1]
+        # 현재 물건을 배낭에 담을 수 있을 때
+        if j >= w:
+            # dp[i-1][j-w] + v -> 새 물건을 담았을 때,
+            # 그 전 단계에서 (물건 개수가 하나 적을때) w만큼의 무게가 남아있을 때 현재 물건을 추가했을 경우의 가치
+            # dp[i-1][j] -> 그 전단계에서 현재 최대무게일때 가치 -> 안담았을때
+            dp[i][j] = max(dp[i-1][j-w] + v, dp[i-1][j])
+        else:
+            dp[i][j] = dp[i-1][j]
+print(dp[n][k])
